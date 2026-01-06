@@ -17,23 +17,32 @@
 
   <section class="cards">
 
-    <div class="card">
+    <div class="card" onclick="openModal('forecast')">
       <h2>🔮 Прогноз дня</h2>
-      <p id="forecast-text">Здесь будет прогноз на день</p>
+      <p>Нажмите, чтобы открыть прогноз</p>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openModal('affirmation')">
       <h2>✨ Аффирмация дня</h2>
-      <p id="affirmation-text">Здесь будет аффирмация</p>
+      <p>Нажмите, чтобы прочитать</p>
     </div>
 
-    <div class="card">
+    <div class="card" onclick="openModal('practice')">
       <h2>🧘 Практика дня</h2>
-      <p id="practice-text">Здесь будет практика</p>
+      <p>Нажмите, чтобы выполнить</p>
     </div>
 
   </section>
 
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h2 id="modal-title"></h2>
+    <p id="modal-text"></p>
+  </div>
 </div>
 
 <nav class="bottom-nav">
