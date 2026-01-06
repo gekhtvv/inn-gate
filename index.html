@@ -18,25 +18,42 @@
   <section class="cards">
 
     <div class="card" onclick="openModal('forecast')">
-      <h2>🔮 Прогноз дня</h2>
-      <p>Нажмите, чтобы открыть прогноз</p>
+      <div class="card-head">
+        <div class="icon">
+          <!-- crystal -->
+          <svg viewBox="0 0 24 24"><path d="M12 2 4 8l8 14 8-14-8-6Z"/></svg>
+        </div>
+        <h2>Прогноз дня</h2>
+      </div>
+      <p>Персональный энергетический прогноз</p>
     </div>
 
     <div class="card" onclick="openModal('affirmation')">
-      <h2>✨ Аффирмация дня</h2>
-      <p>Нажмите, чтобы прочитать</p>
+      <div class="card-head">
+        <div class="icon">
+          <!-- star -->
+          <svg viewBox="0 0 24 24"><path d="m12 2 2.8 6.3 6.7.6-5 4.4 1.5 6.6L12 16.8 6 20l1.5-6.6-5-4.4 6.7-.6Z"/></svg>
+        </div>
+        <h2>Аффирмация дня</h2>
+      </div>
+      <p>Настрой сознания на сегодня</p>
     </div>
 
     <div class="card" onclick="openModal('practice')">
-      <h2>🧘 Практика дня</h2>
-      <p>Нажмите, чтобы выполнить</p>
+      <div class="card-head">
+        <div class="icon">
+          <!-- lotus -->
+          <svg viewBox="0 0 24 24"><path d="M12 4c2 4 6 5 6 9a6 6 0 0 1-12 0c0-4 4-5 6-9Z"/></svg>
+        </div>
+        <h2>Практика дня</h2>
+      </div>
+      <p>Медитация или упражнение</p>
     </div>
 
   </section>
-
 </div>
 
-<!-- МОДАЛЬНОЕ ОКНО -->
+<!-- Модалка -->
 <div class="modal" id="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">×</span>
@@ -46,10 +63,22 @@
 </div>
 
 <nav class="bottom-nav">
-  <a class="nav-item active">🏠<span>Главная</span></a>
-  <a class="nav-item" href="#" target="_blank">▶️<span>YouTube</span></a>
-  <a class="nav-item" href="#" target="_blank">🛍<span>Магазин</span></a>
-  <a class="nav-item" href="#" target="_blank">✈️<span>Telegram</span></a>
+  <a class="nav-item active">
+    <svg viewBox="0 0 24 24"><path d="M3 11 12 3l9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></svg>
+    <span>Главная</span>
+  </a>
+  <a class="nav-item" href="#" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M10 15V9l5 3-5 3Z"/></svg>
+    <span>YouTube</span>
+  </a>
+  <a class="nav-item" href="#" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M6 2h12l-1.5 14h-9Z"/></svg>
+    <span>Магазин</span>
+  </a>
+  <a class="nav-item" href="#" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="m2 12 19-9-4 18-6-5-4 3 1-6Z"/></svg>
+    <span>Telegram</span>
+  </a>
 </nav>
 
 <script src="app.js"></script>
