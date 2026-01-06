@@ -1,17 +1,21 @@
 const screens = document.querySelectorAll('.screen');
+const tabs = document.querySelectorAll('.tab');
 
 function openScreen(id) {
   screens.forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
 
-function goBack() {
-  openScreen('home');
+function switchTab(screenId, tabEl) {
+  openScreen(screenId);
+
+  tabs.forEach(t => t.classList.remove('active'));
+  tabEl.classList.add('active');
 }
 
-// MOCK-ДАННЫЕ (ПОТОМ ЗАМЕНИМ НА API)
-const forecast = "Сегодня благоприятный день для внутренних решений и спокойных действий.";
-const affirmation = "Я доверяю жизни. Всё происходит вовремя.";
+// mock-данные
+document.getElementById('forecastText').innerText =
+  "Сегодня день внутреннего равновесия. Хорошо заниматься собой.";
 
-document.getElementById('forecastText').innerText = forecast;
-document.getElementById('affirmationText').innerText = affirmation;
+document.getElementById('affirmationText').innerText =
+  "Я доверяю жизни. Всё складывается для меня наилучшим образом.";
