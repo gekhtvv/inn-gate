@@ -1,17 +1,17 @@
-const messages = [
-  "Сегодня важно замедлиться и позволить событиям идти своим чередом.",
-  "Обрати внимание на тело — в нём сейчас много ответов.",
-  "День для мягких решений и честности с собой.",
-  "Позволь себе быть неидеальной — в этом твоя сила."
-];
+const screens = document.querySelectorAll('.screen');
 
-document.getElementById("dayMessage").innerText =
-  messages[Math.floor(Math.random() * messages.length)];
-
-function openLink(url) {
-  window.open(url, "_blank");
+function openScreen(id) {
+  screens.forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
 
-function openPage(page) {
-  alert("Раздел \"" + page + "\"\nЭкран будет добавлен на следующем этапе.");
+function goBack() {
+  openScreen('home');
 }
+
+// MOCK-ДАННЫЕ (ПОТОМ ЗАМЕНИМ НА API)
+const forecast = "Сегодня благоприятный день для внутренних решений и спокойных действий.";
+const affirmation = "Я доверяю жизни. Всё происходит вовремя.";
+
+document.getElementById('forecastText').innerText = forecast;
+document.getElementById('affirmationText').innerText = affirmation;
