@@ -1,24 +1,28 @@
 const content = {
   forecast: {
-    title: "🔮 Прогноз дня",
-    text: "Сегодняшний день несёт энергию ясности. Хорошо подойдут спокойные решения и внимание к себе."
+    title: "Прогноз дня",
+    text: "Сегодняшний день несёт мягкую, но глубокую энергию. Прислушайтесь к интуиции."
   },
   affirmation: {
-    title: "✨ Аффирмация дня",
-    text: "Я доверяю жизни. Всё происходит для моего высшего блага."
+    title: "Аффирмация дня",
+    text: "Я доверяю процессу жизни и нахожусь в гармонии с собой."
   },
   practice: {
-    title: "🧘 Практика дня",
-    text: "Сядь удобно, закрой глаза и сделай 5 медленных глубоких вдохов и выдохов."
+    title: "Практика дня",
+    text: "Закрой глаза и сделай 7 медленных вдохов и выдохов."
   }
 };
 
 function openModal(type) {
-  document.getElementById("modal-title").innerText = content[type].title;
-  document.getElementById("modal-text").innerText = content[type].text;
-  document.getElementById("modal").style.display = "flex";
+  modal.style.display = "flex";
+  modalTitle.innerText = content[type].title;
+  modalText.innerText = content[type].text;
 }
 
 function closeModal() {
-  document.getElementById("modal").style.display = "none";
+  modal.style.display = "none";
 }
+
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modal-title");
+const modalText = document.getElementById("modal-text");
