@@ -1,19 +1,8 @@
-const screens = document.querySelectorAll('.screen');
-const tabs = document.querySelectorAll('.tab');
+document.getElementById("forecast-text").innerText =
+  "Сегодняшний день несёт энергию ясности и внутреннего равновесия.";
 
-function openScreen(id) {
-  screens.forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
+document.getElementById("affirmation-text").innerText =
+  "Я доверяю жизни и позволяю событиям разворачиваться естественно.";
 
-function goHome() {
-  openScreen('home');
-  tabs.forEach(t => t.classList.remove('active'));
-  tabs[0].classList.add('active');
-}
-
-function switchTab(id, el) {
-  openScreen(id);
-  tabs.forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-}
+document.getElementById("practice-text").innerText =
+  "Сделай 5 глубоких вдохов и выдохов, наблюдая за ощущениями в теле.";
