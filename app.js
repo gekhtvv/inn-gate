@@ -1,8 +1,24 @@
-document.getElementById("forecast-text").innerText =
-  "Сегодняшний день несёт энергию ясности и внутреннего равновесия.";
+const content = {
+  forecast: {
+    title: "🔮 Прогноз дня",
+    text: "Сегодняшний день несёт энергию ясности. Хорошо подойдут спокойные решения и внимание к себе."
+  },
+  affirmation: {
+    title: "✨ Аффирмация дня",
+    text: "Я доверяю жизни. Всё происходит для моего высшего блага."
+  },
+  practice: {
+    title: "🧘 Практика дня",
+    text: "Сядь удобно, закрой глаза и сделай 5 медленных глубоких вдохов и выдохов."
+  }
+};
 
-document.getElementById("affirmation-text").innerText =
-  "Я доверяю жизни и позволяю событиям разворачиваться естественно.";
+function openModal(type) {
+  document.getElementById("modal-title").innerText = content[type].title;
+  document.getElementById("modal-text").innerText = content[type].text;
+  document.getElementById("modal").style.display = "flex";
+}
 
-document.getElementById("practice-text").innerText =
-  "Сделай 5 глубоких вдохов и выдохов, наблюдая за ощущениями в теле.";
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
