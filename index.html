@@ -2,107 +2,47 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inn.Gate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="app">
+<div class="app">
 
-  <!-- ===== ГЛАВНАЯ ===== -->
-  <section class="screen active" id="home">
+  <header class="header">
+    <h1>Inn.Gate</h1>
+    <p class="subtitle">Твоя точка входа в осознанность</p>
+  </header>
 
-    <div class="glass-card" onclick="openScreen('forecast')">
-      <div class="row">
-        <div class="icon sun"></div>
-        <div>
-          <h3>Прогноз на день</h3>
-          <p>Сегодня вас ждёт много приятных сюрпризов</p>
-        </div>
-      </div>
+  <section class="cards">
+
+    <div class="card">
+      <h2>🔮 Прогноз дня</h2>
+      <p id="forecast-text">Здесь будет прогноз на день</p>
     </div>
 
-    <div class="glass-card" onclick="openScreen('affirmation')">
-      <div class="row">
-        <div class="icon lotus"></div>
-        <div>
-          <h3>Аффирмация дня</h3>
-          <p>Я в безопасности. Я доверяю себе</p>
-        </div>
-      </div>
+    <div class="card">
+      <h2>✨ Аффирмация дня</h2>
+      <p id="affirmation-text">Здесь будет аффирмация</p>
     </div>
 
-    <div class="glass-card" onclick="openScreen('practice')">
-      <div class="row">
-        <div class="icon clock"></div>
-        <div>
-          <h3>Практика на 5 минут</h3>
-          <p>Быстрое расслабление и дыхание</p>
-        </div>
-      </div>
+    <div class="card">
+      <h2>🧘 Практика дня</h2>
+      <p id="practice-text">Здесь будет практика</p>
     </div>
 
-  </section>
-
-  <!-- ===== ПРОГНОЗ ===== -->
-  <section class="screen" id="forecast">
-    <button class="back" onclick="goHome()">← Назад</button>
-    <h1>Прогноз на день</h1>
-    <p class="text">
-      Сегодня благоприятный день для спокойных решений,
-      интуиции и заботы о себе.
-    </p>
-  </section>
-
-  <!-- ===== АФФИРМАЦИЯ ===== -->
-  <section class="screen" id="affirmation">
-    <button class="back" onclick="goHome()">← Назад</button>
-    <h1>Аффирмация дня</h1>
-    <p class="text big">
-      Я доверяю жизни. Всё происходит вовремя.
-    </p>
-  </section>
-
-  <!-- ===== ПРАКТИКА ===== -->
-  <section class="screen" id="practice">
-    <button class="back" onclick="goHome()">← Назад</button>
-    <h1>Практика</h1>
-    <p class="text">
-      Сделайте 5 медленных вдохов и выдохов,
-      концентрируясь на ощущениях в теле.
-    </p>
   </section>
 
 </div>
 
-<!-- ===== НИЖНЕЕ МЕНЮ ===== -->
-<nav class="tab-bar">
-
-  <div class="tab active" onclick="goHome()">
-    <div class="tab-icon home"></div>
-    <span>Главная</span>
-  </div>
-
-  <a class="tab" href="https://www.youtube.com/@InnGate" target="_blank">
-    <div class="tab-icon youtube"></div>
-    <span>YouTube</span>
-  </a>
-
-  <a class="tab" href="https://example.com" target="_blank">
-    <div class="tab-icon shop"></div>
-    <span>Магазин</span>
-  </a>
-
-  <a class="tab" href="https://t.me/gekht1" target="_blank">
-    <div class="tab-icon telegram"></div>
-    <span>Telegram</span>
-  </a>
-
+<nav class="bottom-nav">
+  <a class="nav-item active">🏠<span>Главная</span></a>
+  <a class="nav-item" href="#" target="_blank">▶️<span>YouTube</span></a>
+  <a class="nav-item" href="#" target="_blank">🛍<span>Магазин</span></a>
+  <a class="nav-item" href="#" target="_blank">✈️<span>Telegram</span></a>
 </nav>
 
 <script src="app.js"></script>
 </body>
 </html>
-
-
