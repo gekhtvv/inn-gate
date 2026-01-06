@@ -10,104 +10,90 @@
 
 <div id="app">
 
+  <!-- ===== ГЛАВНАЯ ===== -->
   <section class="screen active" id="home">
-
-  <div class="glass-card" onclick="openScreen('forecast')">
-    <div class="card-row">
-      <div class="icon sun"></div>
-      <div>
-        <h3>Прогноз на день</h3>
-        <p>Сегодня вас ждёт много приятных сюрпризов. Доверьтесь потоку дня.</p>
+    <div class="glass-card" onclick="openScreen('forecast')">
+      <div class="row">
+        <div class="icon sun"></div>
+        <div>
+          <h3>Прогноз на день</h3>
+          <p>Сегодня вас ждёт много приятных сюрпризов.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="glass-card" onclick="openScreen('affirmation')">
-    <div class="card-row">
-      <div class="icon lotus"></div>
-      <div>
-        <h3>Аффирмация дня</h3>
-        <p>Я в безопасности. Я доверяю себе и Вселенной.</p>
+    <div class="glass-card" onclick="openScreen('affirmation')">
+      <div class="row">
+        <div class="icon lotus"></div>
+        <div>
+          <h3>Аффирмация дня</h3>
+          <p>Я в безопасности. Я доверяю себе.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="glass-card" onclick="openScreen('practice')">
-    <div class="card-row">
-      <div class="icon clock"></div>
-      <div>
-        <h3>Практика на 5 минут</h3>
-        <p>Быстрое расслабление и дыхание</p>
+    <div class="glass-card" onclick="openScreen('practice')">
+      <div class="row">
+        <div class="icon clock"></div>
+        <div>
+          <h3>Практика на 5 минут</h3>
+          <p>Быстрое расслабление и дыхание</p>
+        </div>
       </div>
     </div>
-  </div>
-
-</section>
-
-
-    <div class="card" onclick="openScreen('forecast')">
-      <h3>Прогноз на день</h3>
-      <p>Сегодня вас ждёт много приятных сюрпризов.</p>
-    </div>
-
-    <div class="card" onclick="openScreen('affirmation')">
-      <h3>Аффирмация дня</h3>
-      <p>Я в безопасности. Я доверяю себе.</p>
-    </div>
-
-    <div class="card" onclick="openScreen('practice')">
-      <h3>Практика на 5 минут</h3>
-      <p>Быстрое расслабление и дыхание</p>
-    </div>
-
   </section>
 
-  <!-- ЭКРАН ПРОГНОЗА -->
+  <!-- ===== ПРОГНОЗ ===== -->
   <section class="screen" id="forecast">
-    <button class="back" onclick="goBack()">← Назад</button>
+    <button class="back" onclick="goHome()">← Назад</button>
     <h1>Прогноз на день</h1>
-    <p id="forecastText"></p>
+    <p class="text">
+      Сегодня благоприятный день для спокойных решений,
+      внутренней гармонии и заботы о себе.
+    </p>
   </section>
 
-  <!-- ЭКРАН АФФИРМАЦИИ -->
+  <!-- ===== АФФИРМАЦИЯ ===== -->
   <section class="screen" id="affirmation">
-    <button class="back" onclick="goBack()">← Назад</button>
+    <button class="back" onclick="goHome()">← Назад</button>
     <h1>Аффирмация дня</h1>
-    <p id="affirmationText"></p>
+    <p class="text big">
+      Я доверяю жизни. Всё происходит вовремя.
+    </p>
   </section>
 
-  <!-- ЭКРАН ПРАКТИКИ -->
+  <!-- ===== ПРАКТИКА ===== -->
   <section class="screen" id="practice">
-    <button class="back" onclick="goBack()">← Назад</button>
+    <button class="back" onclick="goHome()">← Назад</button>
     <h1>Практика</h1>
-    <p>Здесь будет видео / аудио</p>
+    <p class="text">
+      Сделайте 5 медленных вдохов и выдохов,
+      концентрируясь на ощущениях в теле.
+    </p>
   </section>
 
 </div>
 
-<script src="app.js"></script>
+<!-- ===== TAB BAR ===== -->
 <nav class="tab-bar">
   <div class="tab active" onclick="switchTab('home', this)">
-    <div class="tab-icon home-icon"></div>
+    <div class="tab-icon home"></div>
     <span>Главная</span>
   </div>
-
   <div class="tab" onclick="switchTab('forecast', this)">
-    <div class="tab-icon moon-icon"></div>
+    <div class="tab-icon moon"></div>
     <span>Прогноз</span>
   </div>
-
   <div class="tab" onclick="switchTab('practice', this)">
-    <div class="tab-icon play-icon"></div>
+    <div class="tab-icon play"></div>
     <span>Практика</span>
   </div>
-
   <div class="tab" onclick="switchTab('affirmation', this)">
-    <div class="tab-icon heart-icon"></div>
+    <div class="tab-icon heart"></div>
     <span>Аффирм.</span>
   </div>
 </nav>
+
+<script src="app.js"></script>
 </body>
 </html>
-
-
