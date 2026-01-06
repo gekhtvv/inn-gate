@@ -10,8 +10,40 @@
 
 <div id="app">
 
-  <!-- ГЛАВНЫЙ ЭКРАН -->
   <section class="screen active" id="home">
+
+  <div class="glass-card" onclick="openScreen('forecast')">
+    <div class="card-row">
+      <div class="icon sun"></div>
+      <div>
+        <h3>Прогноз на день</h3>
+        <p>Сегодня вас ждёт много приятных сюрпризов. Доверьтесь потоку дня.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass-card" onclick="openScreen('affirmation')">
+    <div class="card-row">
+      <div class="icon lotus"></div>
+      <div>
+        <h3>Аффирмация дня</h3>
+        <p>Я в безопасности. Я доверяю себе и Вселенной.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="glass-card" onclick="openScreen('practice')">
+    <div class="card-row">
+      <div class="icon clock"></div>
+      <div>
+        <h3>Практика на 5 минут</h3>
+        <p>Быстрое расслабление и дыхание</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 
     <div class="card" onclick="openScreen('forecast')">
       <h3>Прогноз на день</h3>
@@ -56,3 +88,4 @@
 <script src="app.js"></script>
 </body>
 </html>
+
