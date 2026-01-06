@@ -12,12 +12,13 @@
 
   <!-- ===== ГЛАВНАЯ ===== -->
   <section class="screen active" id="home">
+
     <div class="glass-card" onclick="openScreen('forecast')">
       <div class="row">
         <div class="icon sun"></div>
         <div>
           <h3>Прогноз на день</h3>
-          <p>Сегодня вас ждёт много приятных сюрпризов.</p>
+          <p>Сегодня вас ждёт много приятных сюрпризов</p>
         </div>
       </div>
     </div>
@@ -27,7 +28,7 @@
         <div class="icon lotus"></div>
         <div>
           <h3>Аффирмация дня</h3>
-          <p>Я в безопасности. Я доверяю себе.</p>
+          <p>Я в безопасности. Я доверяю себе</p>
         </div>
       </div>
     </div>
@@ -41,6 +42,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- ===== ПРОГНОЗ ===== -->
@@ -49,7 +51,7 @@
     <h1>Прогноз на день</h1>
     <p class="text">
       Сегодня благоприятный день для спокойных решений,
-      внутренней гармонии и заботы о себе.
+      интуиции и заботы о себе.
     </p>
   </section>
 
@@ -74,24 +76,29 @@
 
 </div>
 
-<!-- ===== TAB BAR ===== -->
+<!-- ===== НИЖНЕЕ МЕНЮ ===== -->
 <nav class="tab-bar">
-  <div class="tab active" onclick="switchTab('home', this)">
+
+  <div class="tab active" onclick="goHome()">
     <div class="tab-icon home"></div>
     <span>Главная</span>
   </div>
-  <div class="tab" onclick="switchTab('forecast', this)">
-    <div class="tab-icon moon"></div>
-    <span>Прогноз</span>
-  </div>
-  <div class="tab" onclick="switchTab('practice', this)">
-    <div class="tab-icon play"></div>
-    <span>Практика</span>
-  </div>
-  <div class="tab" onclick="switchTab('affirmation', this)">
-    <div class="tab-icon heart"></div>
-    <span>Аффирм.</span>
-  </div>
+
+  <a class="tab" href="https://youtube.com" target="_blank">
+    <div class="tab-icon youtube"></div>
+    <span>YouTube</span>
+  </a>
+
+  <a class="tab" href="https://example.com" target="_blank">
+    <div class="tab-icon shop"></div>
+    <span>Магазин</span>
+  </a>
+
+  <a class="tab" href="https://t.me/username" target="_blank">
+    <div class="tab-icon telegram"></div>
+    <span>Telegram</span>
+  </a>
+
 </nav>
 
 <script src="app.js"></script>
