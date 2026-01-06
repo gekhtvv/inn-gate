@@ -6,16 +6,14 @@ function openScreen(id) {
   document.getElementById(id).classList.add('active');
 }
 
-function switchTab(screenId, tabEl) {
-  openScreen(screenId);
-
+function goHome() {
+  openScreen('home');
   tabs.forEach(t => t.classList.remove('active'));
-  tabEl.classList.add('active');
+  tabs[0].classList.add('active');
 }
 
-// mock-данные
-document.getElementById('forecastText').innerText =
-  "Сегодня день внутреннего равновесия. Хорошо заниматься собой.";
-
-document.getElementById('affirmationText').innerText =
-  "Я доверяю жизни. Всё складывается для меня наилучшим образом.";
+function switchTab(id, el) {
+  openScreen(id);
+  tabs.forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
