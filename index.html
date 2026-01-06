@@ -8,48 +8,50 @@
 </head>
 <body>
 
-  <div class="app">
+<div class="app">
 
-    <header class="header">
-      <h1>Inn.Gate</h1>
-    </header>
+  <header class="header">
+    <h1>Inn.Gate</h1>
+    <p class="subtitle">Пространство тишины и смысла</p>
+  </header>
 
-    <section class="cards">
-      <div class="card">
-        <div class="icon">☀️</div>
-        <div>
-          <h2>Прогноз на день</h2>
-          <p>Сегодня вас ждёт много приятных сюрпризов. Доверьтесь потоку дня.</p>
-        </div>
-      </div>
+  <!-- Блок дня -->
+  <section class="day-card">
+    <h2>Послание дня</h2>
+    <p id="dayMessage"></p>
+  </section>
 
-      <div class="card">
-        <div class="icon">🌸</div>
-        <div>
-          <h2>Аффирмация дня</h2>
-          <p>Я в безопасности. Я доверяю себе и Вселенной.</p>
-        </div>
-      </div>
+  <!-- Основные карточки -->
+  <section class="cards">
 
-      <div class="card">
-        <div class="icon">🧘</div>
-        <div>
-          <h2>Практика на 5 минут</h2>
-          <p>Быстрое расслабление и дыхание.</p>
-        </div>
-      </div>
-    </section>
+    <div class="card clickable" onclick="openPage('forecast')">
+      <span class="tag">Сегодня</span>
+      <h3>Прогноз на день</h3>
+      <p>Короткое послание для вашего внутреннего состояния.</p>
+    </div>
 
-    <nav class="bottom-menu">
-      <button>🪷<span>Медитации</span></button>
-      <button>✋<span>Практики</span></button>
-      <button>🌙<span>Прогноз</span></button>
-      <button>🎥<span>Вебинары</span></button>
-      <button>▶️<span>YouTube</span></button>
-    </nav>
+    <div class="card clickable" onclick="openPage('affirmation')">
+      <span class="tag">Фокус</span>
+      <h3>Аффирмация дня</h3>
+      <p>Настройка сознания и внимания.</p>
+    </div>
 
-  </div>
+    <div class="card clickable" onclick="openPage('practice')">
+      <span class="tag">5 минут</span>
+      <h3>Практика</h3>
+      <p>Мягкая практика для восстановления.</p>
+    </div>
 
-  <script src="app.js"></script>
+  </section>
+
+</div>
+
+<nav class="bottom-menu">
+  <button onclick="openLink('https://www.youtube.com')">▶️<span>YouTube</span></button>
+  <button onclick="openLink('https://t.me')">📅<span>Вебинары</span></button>
+  <button onclick="openPage('meditation')">🪷<span>Медитации</span></button>
+</nav>
+
+<script src="app.js"></script>
 </body>
 </html>
